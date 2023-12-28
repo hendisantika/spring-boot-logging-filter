@@ -18,7 +18,7 @@ import java.util.List;
 @Service
 public class CustomerService {
 
-    List<Customer> getAllCustomers() {
+    public List<Customer> getAllCustomers() {
         return List.of(new Customer(1, "Naruto", "Naruto"),
                 new Customer(2, "Sasuke", "Naruto"),
                 new Customer(3, "Yuji", "Jujustu Kaisen"),
