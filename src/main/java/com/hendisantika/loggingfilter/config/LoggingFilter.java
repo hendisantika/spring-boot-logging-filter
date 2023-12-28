@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : spring-boot-logging-filter
@@ -17,5 +19,12 @@ import org.springframework.web.filter.OncePerRequestFilter;
 @Slf4j
 @Component
 public class LoggingFilter extends OncePerRequestFilter {
-
+    private String getStringValue(byte[] contentAsByteArray, String characterEncoding) {
+        try {
+            return new String(contentAsByteArray, characterEncoding);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return "";
+    }
 }
