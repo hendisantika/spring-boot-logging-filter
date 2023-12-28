@@ -20,7 +20,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @RestController
-@RequestMapping("/customer")
+@RequestMapping("/customers")
 @RequiredArgsConstructor
 public class CustomerController {
 
